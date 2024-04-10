@@ -76,10 +76,24 @@ document.addEventListener("DOMContentLoaded", function() {
   //   option1Input.addEventListener('change', updateSubject);
   // });
 
-  function updateSubjectValue() {
+
+   function updateSubjectValue() {
       var selectedOption = document.getElementById('option1').value;
       document.getElementById('subjectInput').value = selectedOption;
     }
+
+    // Get the selected option from the URL
+    function getSelectedOptionFromUrl() {
+      var urlParams = new URLSearchParams(window.location.search);
+      var selectedOption = urlParams.get('selectedOption');
+      if (selectedOption) {
+        document.getElementById('option1').value = selectedOption;
+        updateSubjectValue(); // Update the subject input value
+      }
+    }
+
+    // Call the function to get selected option from the URL on page load
+    window.onload = getSelectedOptionFromUrl;
 
 
 
