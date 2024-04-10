@@ -65,16 +65,21 @@ document.addEventListener("DOMContentLoaded", function() {
   });
   
   
-  document.addEventListener("DOMContentLoaded", function() {
-    const option1Input = document.getElementById("option1");
-    const subjectInput = document.getElementsByName("_subject")[0];
+  // document.addEventListener("DOMContentLoaded", function() {
+  //   const option1Input = document.getElementById("option1");
+  //   const subjectInput = document.getElementsByName("_subject")[0];
   
-    function updateSubject() {
-      subjectInput.value = option1Input.value;
+  //   function updateSubject() {
+  //     subjectInput.value = option1Input.value;
+  //   }
+  
+  //   option1Input.addEventListener('change', updateSubject);
+  // });
+
+  function updateSubjectValue() {
+      var selectedOption = document.getElementById('option1').value;
+      document.getElementById('subjectInput').value = selectedOption;
     }
-  
-    option1Input.addEventListener('change', updateSubject);
-  });
 
 
 
