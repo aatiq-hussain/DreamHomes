@@ -89,8 +89,7 @@ document.getElementById('option1').addEventListener('change', function() {
 
 
 
- // Function to get URL parameter value by name
-    function getParameterByName(name, url) {
+ function getParameterByName(name, url) {
       if (!url) url = window.location.href;
       name = name.replace(/[\[\]]/g, '\\$&');
       var regex = new RegExp('[?&]' + name + '(=([^&#]*)|&|#|$)'),
@@ -108,7 +107,7 @@ document.getElementById('option1').addEventListener('change', function() {
       var selectElement = document.getElementById('option1');
       var options = selectElement.options;
       for (var i = 0; i < options.length; i++) {
-        if (options[i].textContent === selectedOption) {
+        if (options[i].text === selectedOption) {
           options[i].selected = true;
           break;
         }
