@@ -64,17 +64,17 @@ document.addEventListener("DOMContentLoaded", function() {
     messageInput.addEventListener('input', validateForm);
   });
   
+  // Update option value in idden value
+  document.addEventListener("DOMContentLoaded", function() {
+    const option1Input = document.getElementById("option1");
+    const subjectInput = document.getElementsByName("_subject")[0];
   
-  // document.addEventListener("DOMContentLoaded", function() {
-  //   const option1Input = document.getElementById("option1");
-  //   const subjectInput = document.getElementsByName("_subject")[0];
+    function updateSubject() {
+      subjectInput.value = option1Input.value;
+    }
   
-  //   function updateSubject() {
-  //     subjectInput.value = option1Input.value;
-  //   }
-  
-  //   option1Input.addEventListener('change', updateSubject);
-  // });
+    option1Input.addEventListener('change', updateSubject);
+  });
 
 
    // function updateSubjectValue() {
@@ -93,7 +93,7 @@ document.addEventListener("DOMContentLoaded", function() {
    //  }
 
     // Call the function to get selected option from the URL on page load
-    window.onload = getSelectedOptionFromUrl;
+    // window.onload = getSelectedOptionFromUrl;
 
 
 
