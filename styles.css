@@ -172,7 +172,7 @@ html, body {
         position: absolute;
         
         left: 0;
-        width: 100%;
+        width: 96%;
         animation: slideDown 0.3s ease; /* Smooth slide down animation */
     }
    
