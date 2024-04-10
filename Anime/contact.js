@@ -77,20 +77,20 @@ document.addEventListener("DOMContentLoaded", function() {
   // });
 
 
-   function updateSubjectValue() {
-      var selectedOption = document.getElementById('option1').value;
-      document.getElementById('subjectInput').value = selectedOption;
-    }
+   // function updateSubjectValue() {
+   //    var selectedOption = document.getElementById('option1').value;
+   //    document.getElementById('subjectInput').value = selectedOption;
+   //  }
 
-    // Get the selected option from the URL
-    function getSelectedOptionFromUrl() {
-      var urlParams = new URLSearchParams(window.location.search);
-      var selectedOption = urlParams.get('selectedOption');
-      if (selectedOption) {
-        document.getElementById('option1').value = selectedOption;
-        updateSubjectValue(); // Update the subject input value
-      }
-    }
+   //  // Get the selected option from the URL
+   //  function getSelectedOptionFromUrl() {
+   //    var urlParams = new URLSearchParams(window.location.search);
+   //    var selectedOption = urlParams.get('selectedOption');
+   //    if (selectedOption) {
+   //      document.getElementById('option1').value = selectedOption;
+   //      updateSubjectValue(); // Update the subject input value
+   //    }
+   //  }
 
     // Call the function to get selected option from the URL on page load
     window.onload = getSelectedOptionFromUrl;
@@ -135,27 +135,27 @@ document.getElementById('option1').addEventListener('change', function() {
 
 
  // Function to get URL parameter value by name
-    function getParameterByName(name, url) {
-      if (!url) url = window.location.href;
-      name = name.replace(/[\[\]]/g, '\\$&');
-      var regex = new RegExp('[?&]' + name + '(=([^&#]*)|&|#|$)'),
-          results = regex.exec(url);
-      if (!results) return null;
-      if (!results[2]) return '';
-      return decodeURIComponent(results[2].replace(/\+/g, ' '));
-    }
+    // function getParameterByName(name, url) {
+    //   if (!url) url = window.location.href;
+    //   name = name.replace(/[\[\]]/g, '\\$&');
+    //   var regex = new RegExp('[?&]' + name + '(=([^&#]*)|&|#|$)'),
+    //       results = regex.exec(url);
+    //   if (!results) return null;
+    //   if (!results[2]) return '';
+    //   return decodeURIComponent(results[2].replace(/\+/g, ' '));
+    // }
 
-    // Get the selectedOption parameter from the URL
-    var selectedOption = getParameterByName('selectedOption');
+    // // Get the selectedOption parameter from the URL
+    // var selectedOption = getParameterByName('selectedOption');
 
-    // If the selectedOption parameter is found, set the corresponding option in the select element
-    if (selectedOption) {
-      var selectElement = document.getElementById('option1');
-      var options = selectElement.options;
-      for (var i = 0; i < options.length; i++) {
-        if (options[i].textContent.trim() === selectedOption.trim()) {
-          options[i].selected = true;
-          break;
-        }
-      }
-    }
+    // // If the selectedOption parameter is found, set the corresponding option in the select element
+    // if (selectedOption) {
+    //   var selectElement = document.getElementById('option1');
+    //   var options = selectElement.options;
+    //   for (var i = 0; i < options.length; i++) {
+    //     if (options[i].textContent.trim() === selectedOption.trim()) {
+    //       options[i].selected = true;
+    //       break;
+    //     }
+    //   }
+    // }
