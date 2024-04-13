@@ -308,6 +308,26 @@ html, body {
     text-align: left;
     
 }
+.package span3{
+    font-size: 16px;
+    font-weight: bold;
+    color:rgb(255, 168, 125);
+    margin: 4px 0px 10px 32px;
+    justify-content: left;
+    display: flex;
+    text-align: left;
+    
+}
+.package span4{
+    font-size: 15px;
+    font-weight: normal;
+    color:rgba(255, 235, 225, 0.788);
+    justify-content: left;
+    display: flex;
+    margin: -8px 0px 12px 36px;
+    text-align: left;
+    
+}
 .package h3{
     font-size: x-large;
     margin-bottom: 5px;
