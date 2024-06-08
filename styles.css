@@ -161,7 +161,7 @@ html, body {
     }
 }
 
-@media screen and (max-width: 430px) {
+@media screen and (max-width: 400px) {
     .navbar-center.active ul {
         display: flex;
         background-color: #161616;
