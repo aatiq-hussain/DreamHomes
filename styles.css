@@ -163,15 +163,20 @@ html, body {
 
 @media screen and (max-width: 430px) {
     .navbar-center.active ul {
-        display: block;
+        display: flex;
         background-color: #161616;
         padding: inherit;
         padding-top: 20px;
         padding-bottom: 20px;
-        
+        height: 140vh;
         position: absolute;
-        
+        flex-direction: column;
+        align-items: flex-start;
+        padding-left: 5%;
+        justify-content: center;
+        font-size: 40px;
         left: 0;
+        top:40%;
         width: 96%;
         animation: slideDown 0.3s ease; /* Smooth slide down animation */
     }
